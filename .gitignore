@@ -2,3 +2,5 @@
 *.swo
 *.pyc
 matrix_scraper/matrices
+thumbnails/*.tgz
+thumbnails/thumbnails
