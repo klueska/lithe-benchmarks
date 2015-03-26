@@ -4,3 +4,5 @@
 matrix_scraper/matrices
 thumbnails/*.tgz
 thumbnails/thumbnails
+thumbnails_net/*.tgz
+thumbnails_net/thumbnails
