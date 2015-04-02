@@ -1,7 +1,7 @@
 *.swp
 *.swo
 *.pyc
-matrix_scraper/matrices
+spqr/matrix_scraper/matrices
 thumbnails/*.tgz
 thumbnails/thumbnails
 thumbnails_net/*.tgz
