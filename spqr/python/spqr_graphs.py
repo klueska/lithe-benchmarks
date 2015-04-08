@@ -101,14 +101,14 @@ def graph_results(bdata, config):
 
     j = 0
     r = results[m]['Out of the Box']['native']
-    labels.append( "Out of the Box - native")
+    labels.append( "Out of the Box - Linux NPTL")
     b = bar(margin + j*width, r[2], width, label=labels[-1], color=colors[j])
     e = plt.errorbar(margin + j*width + width/2, r[2], yerr=r[3], fmt=None, ecolor='k', lw=2, capsize=5, capthick=2)
     bs.append(b)
 
     j += 1
     r = results[m]['Manually Tuned']['native']
-    labels.append( "Manually Tuned - native")
+    labels.append( "Manually Tuned - Linux NPTL")
     top_label = "OMP=%d, TBB=%d" % (r[0], r[1])
     b = bar(margin + j*width, r[2], width, label=labels[-1], color=colors[j])
     e = plt.errorbar(margin + j*width + width/2, r[2], yerr=r[3], fmt=None, ecolor='k', lw=2, capsize=5, capthick=2)
@@ -138,8 +138,8 @@ def graph_results(bdata, config):
     xlim([0, plotwidth])
     xticks([plotwidth/2.0], [m], fontsize=16)
 
-  figlegend(bs, labels, loc='center', bbox_to_anchor=(0.023, 0.60, 1, 1), ncol=1, labelspacing=0.5)
-  suptitle("Performance of SPQR with Lithe", y=1.30, x=0.523, fontsize=20)
+  figlegend(bs, labels, loc='center', bbox_to_anchor=(.72, 0.355, 1, 1), ncol=1, labelspacing=0.5)
+  suptitle("Performance of SPQR with Lithe", y=1.05, x=0.523, fontsize=20)
 
   tight_layout(pad=0.8)
   figname = config.output_folder + "/spqr-results.png"
