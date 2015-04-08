@@ -2,6 +2,7 @@
 *.swo
 *.pyc
 spqr/matrix_scraper/matrices
+spqr/data
 thumbnails/*.tgz
 thumbnails/thumbnails
 thumbnails_net/*.tgz
