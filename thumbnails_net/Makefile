@@ -1,8 +1,8 @@
 EXEC = thumbnails
-DEPS = -lcurl -pthread
+DEPS = -lm -lcurl -pthread native-timing.c
 
 all:
-	gcc -std=gnu99 $(INCS) $(EXEC).c -o $(EXEC) $(DEPS)
+	gcc -std=gnu99 -g $(INCS) $(EXEC).c -o $(EXEC) $(DEPS)
 
 clean:
 	rm -rf $(EXEC)
