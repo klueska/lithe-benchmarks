@@ -7,3 +7,4 @@ thumbnails/*.tgz
 thumbnails/thumbnails
 thumbnails_net/*.tgz
 thumbnails_net/thumbnails
+thumbnails_net/data
