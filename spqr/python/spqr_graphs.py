@@ -72,11 +72,14 @@ def best_results(mdata):
     best = [0, 0, sys.float_info.max]
     for omp in mdata[lib].keys():
       for tbb in mdata[lib][omp].keys():
-        avg = np.mean(mdata[lib][omp][tbb].values())
-        var = np.std(mdata[lib][omp][tbb].values())
-        if avg < best[2]:
-          best = [omp, tbb, avg, var]
-    results[lib] = best
+        val = mdata[lib][omp][tbb][1]
+        if val < best[2]:
+          best = [omp, tbb, val]
+    omp = best[0]
+    tbb = best[1]
+    avg = np.mean(mdata[lib][omp][tbb].values())
+    var = np.std(mdata[lib][omp][tbb].values())
+    results[lib] = [omp, tbb, avg, var]
   return results
 
 def graph_results(bdata, config):
