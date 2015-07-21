@@ -107,6 +107,8 @@ def graph_results(bdata, config):
     labels.append( "Out of the Box - Linux NPTL")
     b = bar(margin + j*width, r[2], width, label=labels[-1], color=colors[j])
     e = plt.errorbar(margin + j*width + width/2, r[2], yerr=r[3], fmt=None, ecolor='k', lw=2, capsize=5, capthick=2)
+    print labels[-1],
+    print r[2]
     bs.append(b)
 
     j += 1
@@ -115,6 +117,8 @@ def graph_results(bdata, config):
     top_label = "OMP=%d, TBB=%d" % (r[0], r[1])
     b = bar(margin + j*width, r[2], width, label=labels[-1], color=colors[j])
     e = plt.errorbar(margin + j*width + width/2, r[2], yerr=r[3], fmt=None, ecolor='k', lw=2, capsize=5, capthick=2)
+    print labels[-1],
+    print r[2]
     bs.append(b)
 
     j += 1
@@ -123,6 +127,8 @@ def graph_results(bdata, config):
     top_label = "OMP=%d, TBB=%d" % (r[0], r[1])
     b = bar(margin + j*width, r[2], width, label=labels[-1], color=colors[j])
     e = plt.errorbar(margin + j*width + width/2, r[2], yerr=r[3], fmt=None, ecolor='k', lw=2, capsize=5, capthick=2)
+    print labels[-1],
+    print r[2]
     bs.append(b)
 
     j += 1
@@ -130,6 +136,9 @@ def graph_results(bdata, config):
     labels.append("Lithe")
     b = bar(margin + j*width, r[2], width, label=labels[-1], color=colors[j])
     e = plt.errorbar(margin + j*width + width/2, r[2], yerr=r[3], fmt=None, ecolor='k', lw=2, capsize=5, capthick=2)
+    print labels[-1],
+    print r[2],
+    print (results[m]['Manually Tuned']['native'][2] - r[2])/results[m]['Manually Tuned']['native'][2]
     bs.append(b)
 
     if i == 0:
